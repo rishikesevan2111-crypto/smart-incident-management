@@ -5,10 +5,7 @@ target/
 .kotlin
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -16,8 +13,11 @@ target/
 # Spring Boot config
 **/application.properties
 .env
-application.properties
-
+.env.*
+.env.properties
+**/.env
+**/.env.*
+**/.env.properties
 
 ### Eclipse ###
 .apt_generated
@@ -44,24 +44,12 @@ build/
 ### Mac OS ###
 .DS_Store
 
-# Protect secrets and local environment files
-.env.*
-.env
-.env.properties
-**/.env
-**/.env.*
-**/.env.properties
-
-# Ignore frontend dependencies and build output
+# Frontend dependencies and build output
 **/node_modules/
 **/dist/
 
-# Ignore logs
+# Logs and local development files
 *.log
-
-# Local development files
-.idea/
 .m2/
 backend-startup-error.txt
 backend/startup-log.txt
-
