@@ -1,0 +1,61 @@
+import {
+  LayoutDashboard,
+  FolderKanban,
+  Bug,
+  ShieldCheck,
+  FileBarChart,
+  Users,
+  ClipboardList,
+  Wrench,
+  CheckCircle2,
+  BugIcon,
+  BugPlay
+} from "lucide-react";
+
+export const SIDEBAR_CONFIG = {
+  SUPER_ADMIN: [
+    { label: "Dashboard", path: "/superadmin/dashboard", icon: LayoutDashboard },
+    { label: "Add Company Admin", path: "/superadmin/add-company-admin", icon: Users },
+    { label: "View Users", path: "/superadmin/users", icon: ClipboardList },
+    { label: "Audit Logs", path: "/superadmin/logs", icon: FileBarChart }
+  ],
+
+  ADMIN: [
+    { label: "Dashboard", path: "/admin/dashboard", icon: LayoutDashboard },
+    { label: "Projects", path: "/admin/projects", icon: FolderKanban },
+    { label: "SLA Monitoring", path: "/admin/sla-monitoring", icon: ShieldCheck },
+    { label: "SLA Configuration", path: "/admin/sla-config", icon: Wrench },
+    { label: "User Management", path: "/admin/users", icon: Users },
+    { label: "Reports", path: "/admin/reports", icon: FileBarChart }
+  ],
+
+  MANAGER: [
+    { label: "Dashboard", path: "/manager/dashboard", icon: LayoutDashboard },
+    { label: "Assigned Projects", path: "/manager/projects", icon: FolderKanban },
+    { label: "Issues", path: "/manager/issues", icon: Bug },
+    { label: "Assign Issues", path: "/manager/assign-issues", icon: ClipboardList },
+    { label: "Resolved Issues", path: "/manager/resolved-issues", icon: CheckCircle2 },
+    { label: "SLA Monitoring", path: "/manager/sla-monitoring", icon: ShieldCheck },
+    { label: "Workload", path: "/manager/workload", icon: FileBarChart },
+    { label: "Team Users", path: "/manager/team-users", icon: Users },
+    { label: "Reports", path: "/manager/reports", icon: FileBarChart }
+  ],
+
+  ENGINEER: [
+    { label: "Dashboard", path: "/engineer/dashboard", icon: LayoutDashboard },
+    { label: "Project Details", path: "/engineer/project", icon: FolderKanban },
+    { label: "Assigned Issues", path: "/engineer/issues", icon: Bug },
+    { label: "SLA Policies", path: "/engineer/sla-policies", icon: ShieldCheck },
+    { label: "My Workload", path: "/engineer/workload", icon: FileBarChart },
+    { label: "Solved Issues", path: "/engineer/solved-issues", icon: BugPlay },
+    { label: "Reports", path: "/engineer/reports", icon: FileBarChart }
+  ],
+
+  USER: [
+    { label: "Dashboard", path: "/user/dashboard", icon: LayoutDashboard },
+    { label: "Project Details", path: "/user/project", icon: FolderKanban },
+    { label: "Create Issue", path: "/user/create-issue", icon: Bug },
+    { label: "My Issues", path: "/user/issues", icon: ClipboardList },
+    { label: "Reports", path: "/user/reports", icon: FileBarChart }
+  ]
+};
